@@ -34,10 +34,10 @@ Route::get('/', function () {
 //     return view('/Bagian3');
 // });
 
-Route::get('index', 'Api/PagesController@index');
+Route::get('index', 'PagesController@index');
 
-Route::get('bagian1', 'Api/PagesController@bagian1');
+Route::get('bagian1', 'PagesController@bagian1');
 
-Route::get('bagian2', 'Api/PagesController@bagian2');
+Route::get('bagian2', 'PagesController@bagian2');
 
-Route::get('bagian3', 'Api/PagesController@bagian3');
+Route::get('bagian3', 'PagesController@bagian3');
