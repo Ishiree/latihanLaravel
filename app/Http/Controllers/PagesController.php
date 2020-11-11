@@ -11,8 +11,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 class PagesController extends Controller
 {
-    public function index(){
-        return view('index');
+    public function home(){
+        return view('home');
     }
     
     public function Bagian1(){
@@ -24,5 +24,9 @@ class PagesController extends Controller
     }
     public function Bagian3(){
         return view('bagian3');
+    }
+
+    public function welcome(){
+        return view('welcome');
     }
 }

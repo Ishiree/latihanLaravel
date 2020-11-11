@@ -15,7 +15,7 @@
        <div class="row justify-content-md-center">
            <div class="col-6 text-center">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="{{ '/index' }}">Home</a>
+                <a class="navbar-brand" href="{{ '/home' }}">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,6 +24,7 @@
                     <a class="nav-link active" href="{{ '/bagian1' }}">Bagian 1 <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="{{ '/bagian2' }}">Bagian 2</a>
                     <a class="nav-link" href="{{ '/bagian3' }}">Bagian 3</a>
+                    <a class="nav-link" href="{{ '/books' }}">Books</a>
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bagian 4</a>
                   </div>
                 </div>

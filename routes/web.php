@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\TextUI\XmlConfiguration\Group;
-
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,7 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@welcome');
 
 // Route::get('/index', function () {
 //     return view('index');
@@ -34,10 +33,20 @@ Route::get('/', function () {
 //     return view('/Bagian3');
 // });
 
-Route::get('index', 'PagesController@index');
+Route::get('home', 'App\Http\Controllers\PagesController@home');
 
-Route::get('bagian1', 'PagesController@bagian1');
+Route::get('/bagian1', 'App\Http\Controllers\PagesController@bagian1');
 
-Route::get('bagian2', 'PagesController@bagian2');
 
-Route::get('bagian3', 'PagesController@bagian3');
+Route::get('/bagian2', 'App\Http\Controllers\bagian2Controller@index');
+
+
+Route::get('/bagian3', 'App\Http\Controllers\PagesController@bagian3');
+
+//Books
+
+Route::get('/books', 'App\Http\Controllers\BooksController@index');
+
+// Route::get('/books/{book}', 'App\Http\Controllers\BooksController@show');
+
+Route::get('books/{book}', [BooksController::class, 'show']);
